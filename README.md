@@ -1,1 +1,2 @@
 # fcbai-blog
+all post
