@@ -1,2 +1,6 @@
 # fcbai-blog
-all post
+
+# Home Page:
+
+https://baifachuan.com/
+ 
