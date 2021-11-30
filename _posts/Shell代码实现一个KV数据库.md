@@ -41,7 +41,7 @@ esac
 ./db.sh db_set a dd
 ./db.sh db_set a dd22
 # 取
- ./db.sh db_get a
+./db.sh db_get a
 ```
 其中
 * db_set ，保存键值对数据，即将键值用逗号分隔追加到名为 database 的数据文件；
