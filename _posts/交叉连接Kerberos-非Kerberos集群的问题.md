@@ -1,8 +1,9 @@
 ---
 title: 交叉连接Kerberos/非Kerberos集群的问题
-date: 2021-10-15 11:58:20
 tags: 编程基础
 categories: 编程基础
+abbrlink: 6b08e13f
+date: 2021-10-15 11:58:20
 ---
 
 场景：一个Spring的Web服务中提供了一个能力，可以使用Java API去读取多个不同集群的HDFS上的文件，而多个HDFS集群，有的可能开启了Kerberos，有的则可能没有开启。
