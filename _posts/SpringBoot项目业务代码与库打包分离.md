@@ -119,5 +119,30 @@ config放配置文件，lib放第三方依赖，包括pom的依赖，bin写一�
         </excludes>
     </configuration>
 </plugin>
+
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-antrun-plugin</artifactId>
+    <executions>
+        <execution>
+            <id>copy-jar-file</id>
+            <phase>package</phase>
+            <goals>
+                <goal>run</goal>
+            </goals>
+            <configuration>
+                <target>
+                    <copy todir="${project.build.directory}/config">
+                        <fileset dir="${project.basedir}/src/main/resources">
+                            <include name="*" />
+                            <include name="*/*" />
+                            <include name="*/*/*" />
+                        </fileset>
+                    </copy>
+                </target>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
 ```
 从功能上来说，maven有很好的插件，可以直接通过配置上面的插件，达到想要的效果。
