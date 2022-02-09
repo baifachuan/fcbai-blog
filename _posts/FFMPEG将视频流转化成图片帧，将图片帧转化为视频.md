@@ -41,4 +41,10 @@ ffmpeg -f image2 -framerate 30 -i %04d.png -b:v 5626k 13stbself2.avi
 
 这样转化前后的视频质量几乎没有差别（基本无损）。
 
+另外再记录一个视频转换的小技巧：
 
+```
+ ffmpeg -i 1.mp4 -f image2  -vf fps=fps=1 -qscale:v 2 ./data/mp4-%05d.jpeg
+```
+
+fps=fps=1 代表每一秒一帧，也可以fps=fps=1/10，代表代表每一秒十帧，也就是每隔十秒抓一张图片。
